@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Apple SF Pro Text (Numbers & Latin Glyph Subset) ── */
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/fonts/sf-pro-text_regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/fonts/sf-pro-text_semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ── Hebrew Ploni AAA (Premier Israeli Geometric Typography) ── */
+@font-face {
+  font-family: 'Ploni';
+  src: url('/fonts/ploni-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ploni';
+  src: url('/fonts/ploni-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ploni';
+  src: url('/fonts/ploni-demibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ploni';
+  src: url('/fonts/ploni-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Apple HIG Light Theme Architecture ── */
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro Text", "Ploni", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F2F2F7;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Apple iOS UI Kit (Sketch Library Match) ── */
+
+/* Navigation Bar */
+.ios-nav-bar {
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 0.5px solid rgba(60, 60, 67, 0.18);
+}
+
+/* Inset Grouped Section Header */
+.ios-section-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6D6D72;
+  text-transform: uppercase;
+  letter-spacing: -0.08px;
+  padding: 0 16px 6px 16px;
+}
+
+/* Inset Grouped Card (Table View Group) */
+.ios-group {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* Table View Cell Separator */
+.ios-cell-divider {
+  height: 0.5px;
+  background-color: #C6C6C8;
+  margin-right: 16px;
+}
+
+/* Segmented Control (Apple HIG 32px height) */
+.ios-segmented-bar {
+  background-color: rgba(118, 118, 128, 0.12);
+  border-radius: 8px;
+  padding: 2px;
+  height: 32px;
+}
+
+.ios-segmented-thumb {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 7px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Primary Filled Button (Apple HIG 50px) */
+.ios-button-filled {
+  height: 50px;
+  border-radius: 12px;
+  background-color: #007AFF;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.ios-button-filled:active {
+  opacity: 0.85;
+  transform: scale(0.99);
+}
+
+/* Tinted Button (Apple HIG Secondary) */
+.ios-button-tinted {
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(0, 122, 255, 0.10);
+  color: #007AFF;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.ios-button-tinted:active {
+  background-color: rgba(0, 122, 255, 0.18);
+  transform: scale(0.99);
+}
+
+/* Gray Button */
+.ios-button-gray {
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(118, 118, 128, 0.12);
+  color: #007AFF;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+
+.ios-button-gray:active {
+  background-color: rgba(118, 118, 128, 0.20);
+}
+
+/* WhatsApp Green Action Button */
+.ios-button-whatsapp {
+  height: 50px;
+  border-radius: 12px;
+  background-color: #34C759;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.ios-button-whatsapp:active {
+  opacity: 0.85;
+  transform: scale(0.99);
+}
+
+/* Inset Input */
+.ios-text-input {
+  background-color: transparent;
+  color: #000000;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.ios-text-input::placeholder {
+  color: #C7C7CD;
+}
+
+/* Home Indicator Bar */
+.ios-home-bar {
+  width: 134px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.22);
+  border-radius: 100px;
+  margin: 8px auto 4px auto;
+}
