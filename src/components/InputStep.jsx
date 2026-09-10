@@ -6,7 +6,7 @@ import { findRemainingPhoneNumbers, formatSinglePhoneNumberToWords } from '../ut
 const SAMPLE_TEMPLATES = [
   {
     title: 'מבצע סוף שבוע',
-    text: 'פיצה דלישס במבצע סוף שבוע מיוחד. מגש משפחתי ענק עם שתי תוספות ובקבוק שתיה ב-49 שקלים בלבד. להזמנות משלוחים חייגו עכשיו: 052-5021055'
+    text: 'פיצה דלישס במבצע סוף שבוע מיוחד. מגש משפחתי ענק עם שתי תוספות ובקבוק שתיה ב-49 שקלים בלבד. להזמנות משלוחים חייגו עכשיו: 050-1234567'
   },
   {
     title: 'נדל"ן ומגורים',
@@ -54,7 +54,7 @@ export default function InputStep({
             value={rawContent}
             onChange={(e) => setRawContent(e.target.value)}
             placeholder="הזן כאן את תוכן ההודעה הגולמית או המבצע...
-לדוגמה: פיצה דלישס במבצע סוף שבוע! מגש משפחתי + שתיה ב-49 שקלים בלבד. להזמנות חייגו 052-5021055"
+לדוגמה: פיצה דלישס במבצע סוף שבוע! מגש משפחתי + שתיה ב-49 שקלים בלבד. להזמנות חייגו 050-1234567"
             rows={5}
             dir="rtl"
             className="w-full ios-text-input focus:outline-none resize-none"
